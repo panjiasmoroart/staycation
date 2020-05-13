@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Button from 'components/button';
+import Button from 'components/Button';
 import BrandIcon from 'includes/IconText';
 
 export default function Header(props) {
@@ -13,9 +13,9 @@ export default function Header(props) {
   return (
     <header className="spacing-sm">
       <div className="container">
-        <nav className="navbar navbar-expand-lg navbar-light">
+        <nav className="navbar navbar-expand-lg navbar-light p-0">
           <BrandIcon />
-        
+
           <div className="collapse navbar-collapse">
             <ul className="navbar-nav ml-auto">
               <li className={`nav-item${getNavLinkClass("/")}`}>
