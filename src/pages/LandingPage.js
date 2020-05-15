@@ -4,7 +4,7 @@ import Header from 'includes/Header';
 import Hero from 'includes/Hero';
 import MostPicked from 'includes/MostPicked';
 import landingPage from 'json/landingPage';
-import ContentBody from 'includes/ContentBody';
+import Categories from 'includes/Categories';
 
 export default class LandingPage extends Component {
 
@@ -20,7 +20,7 @@ export default class LandingPage extends Component {
       {false && JSON.stringify(landingPage.hero)}
       <Hero refMostPicked={this.refMostPicked} data={landingPage.hero} />
       <MostPicked refMostPicked={this.refMostPicked} data={landingPage.mostPicked} />
-      <ContentBody />
+      <Categories data={landingPage.categories} />
     </>
   }
 }
