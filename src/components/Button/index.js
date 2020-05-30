@@ -21,14 +21,14 @@ export default function Button(props) {
     return (
       <span className={className.join(" ")} style={props.style}>
         {props.isLoading ? (
-          // <Fragment></Fragment> ==== <></>
+          // <Fragment></Fragment> === <></>
           <>
             <span className="spinner-border spinner-border-sm mx-5"></span>
             <span className="sr-only">Loading...</span>
           </>
         ) : (
-          props.children
-        )}
+            props.children
+          )}
       </span>
     )
   }
@@ -37,18 +37,18 @@ export default function Button(props) {
     // jika buka link
     if (props.isExternal) {
       return (
-        <a 
-          href={props.href} 
+        <a
+          href={props.href}
           // join buat menggagungkan misalkan di dalam className ada btn-lg btn-primary 
           className={className.join(" ")}
-          style={props.style} target={props.target === "_blank" ? "_blank" : undefined} 
+          style={props.style} target={props.target === "_blank" ? "_blank" : undefined}
           rel={props.target === "_blank" ? "noopener noreferrer" : undefined}
         >
-            {props.children}
+          {props.children}
         </a>
       )
     }
-    else{
+    else {
       return (
         <Link
           to={props.href}
@@ -64,7 +64,7 @@ export default function Button(props) {
   }
 
   return (
-    <button 
+    <button
       className={className.join(" ")}
       style={props.style}
       onClick={onClick}
@@ -72,7 +72,7 @@ export default function Button(props) {
       {props.children}
     </button>
   );
-  
+
 }
 
 // MyComponent.propTypes = {}
